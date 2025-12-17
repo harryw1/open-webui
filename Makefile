@@ -31,3 +31,17 @@ update:
 	$(DOCKER_COMPOSE) up --build -d
 	$(DOCKER_COMPOSE) start
 
+# Rust Projects
+.PHONY: build-backend build-tui clean-rust
+
+build-backend:
+	@echo "Building MCP Server..."
+	cargo build --manifest-path backend/mcp-server-rust/Cargo.toml
+
+build-tui:
+	@echo "Building Rust TUI..."
+	cargo build --manifest-path clients/rust-tui/Cargo.toml
+
+clean-rust:
+	cargo clean --manifest-path backend/mcp-server-rust/Cargo.toml
+	cargo clean --manifest-path clients/rust-tui/Cargo.toml
