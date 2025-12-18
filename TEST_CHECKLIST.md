@@ -2,6 +2,18 @@
 
 This checklist is designed to verify the functionality of the new Rust-based TUI client and the local MCP server integration.
 
+## Quick Start (macOS / Linux)
+
+For convenience, you can use the `run-tui.sh` script to build and run the TUI:
+
+```bash
+# Ensure your API key is set
+export OPEN_WEBUI_API_KEY=your_key_here
+
+# Run the TUI (builds automatically)
+./run-tui.sh
+```
+
 ## 1. Prerequisites & Setup
 
 - [ ] **Environment Variables**:
@@ -17,7 +29,7 @@ This checklist is designed to verify the functionality of the new Rust-based TUI
 ## 2. TUI Basic Functionality
 
 - [ ] **Launch**:
-    - Run the TUI client (e.g., `cargo run` in `clients/rust-tui` or `./clients/rust-tui/target/debug/rust-tui`).
+    - Run the TUI client (e.g., `./run-tui.sh` or `./clients/rust-tui/target/debug/rust-tui`).
     - Verify the TUI opens without crashing.
     - Verify the "Chat" and "Input" areas are visible.
     - Verify the initial system message: "Welcome to the Open WebUI TUI! Type your message below."
